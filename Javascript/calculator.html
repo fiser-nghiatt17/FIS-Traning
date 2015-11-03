@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td><button type="button" value="7" onclick="add(this)">7</button></td>
+		<td><button type="button" value="8" onclick="add(this)">8</button></td>
+		<td><button type="button" value="9" onclick="add(this)">9</button></td>
+		<td><input id="sum" type="text" value="0" size="1"></td> 
+	</tr>
+	<tr>
+		<td><button type="button" value="4" onclick="add(this)">4</button></td>
+		<td><button type="button" value="5" onclick="add(this)">5</button></td>
+		<td><button type="button" value="6" onclick="add(this)">6</button></td>
+	</tr>
+	<tr>
+		<td><button type="button" value="1" onclick="add(this)">1</button></td>
+		<td><button type="button" value="2" onclick="add(this)">2</button></td>
+		<td><button type="button" value="3" onclick="add(this)">3</button></td>
+		<td><button type="button" onclick="ac()">AC</button></td>
+	</tr>
+</table>
+</body>
+<script>
+	function add(e){
+		$("#sum").val(parseInt($("#sum").val(), 10) + parseInt($(e).val(), 10));
+	}
+	function ac(){
+		$("#sum").val(0);
+	}
+</script>
+</html>
